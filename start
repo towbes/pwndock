@@ -2,6 +2,10 @@
 
 docker run --rm --detach --privileged -it \
 	--net=host \
+	-v $(pwd):/mnt \
+	-v $HOME/learning:/root/learning \
+        -v $HOME/code:/root/code \
+	-v $HOME/ctf:/root/ctf \
 	--hostname pwn \
 	--name pwndock \
 	pwndock \
